@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>مزيكا توتا - الأغاني</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --card-2: #1f2937;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #22c55e;
+      --accent-2: #38bdf8;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 18px 40px rgba(0,0,0,0.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .logo-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid;
+      place-items: center;
+      font-weight: bold;
+      color: #001018;
+      box-shadow: var(--shadow);
+    }
+
+    .logo h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .logo p {
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--card-2);
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--border);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(34,197,94,0.16), rgba(56,189,248,0.12));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .hero h2 {
+      margin: 0 0 8px;
+      font-size: 28px;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .songs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .song-card {
+      background: rgba(17,24,39,0.9);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .song-cover {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #22c55e, #0ea5e9);
+      margin-bottom: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 44px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .song-title {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .song-meta {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .play-link {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--accent);
+      color: #052e16;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 640px) {
+      .topbar { flex-direction: column; align-items: stretch; }
+      .back-btn { width: 100%; }
+      .hero h2 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a class="logo" href="index.html">
+        <div class="logo-badge">م</div>
+        <div>
+          <h1>مزيكا توتا</h1>
+          <p>صفحة الأغاني</p>
+        </div>
+      </a>
+      <a class="back-btn" href="index.html">الرجوع للرئيسية</a>
+    </div>
+
+    <section class="hero">
+      <h2>كل الأغاني هنا</h2>
+      <p>اختار الأغنية اللي تعجبك وافتح المشغل بسرعة.</p>
+    </section>
+
+    <section class="songs-grid">
+      <article class="song-card">
+        <div class="song-cover">1</div>
+        <h3 class="song-title">أغنية 1</h3>
+        <p class="song-meta">الفنان: مزيكا توتا</p>
+        <a class="play-link" href="player.html">تشغيل</a>
+      </article>
+
+      <article class="song-card">
+        <div class="song-cover">2</div>
+        <h3 class="song-title">أغنية 2</h3>
+        <p class="song-meta">الفنان: مزيكا توتا</p>
+        <a class="play-link" href="player.html">تشغيل</a>
+      </article>
+
+      <article class="song-card">
+        <div class="song-cover">3</div>
+        <h3 class="song-title">أغنية 3</h3>
+        <p class="song-meta">الفنان: مزيكا توتا</p>
+        <a class="play-link" href="player.html">تشغيل</a>
+      </article>
+
+      <article class="song-card">
+        <div class="song-cover">4</div>
+        <h3 class="song-title">أغنية 4</h3>
+        <p class="song-meta">الفنان: مزيكا توتا</p>
+        <a class="play-link" href="player.html">تشغيل</a>
+      </article>
+    </section>
+
+    <div class="footer">مزيكا توتا - صفحة الأغاني</div>
+  </div>
+<script>window.parent.postMessage({ action: "ready" }, "*"); 
+ 
+window.console = new Proxy(console, {
+  get(target, prop) {
+    if (['log', 'warn', 'error'].includes(prop)) {
+      return new Proxy(target[prop], {
+        apply(fn, thisArg, args) {
+          fn.apply(thisArg, args);
+          window.parent.postMessage({ action: 'console', 
+            type: prop, 
+            args: args.map((arg) => {
+              try {
+                return JSON.stringify(arg).replace(/^["']|["']$/g, '');
+              } catch (e) {
+                return arg;
+              }
+            }) 
+          }, '*');
+        }
+      });
+    }
+    return target[prop];
+  }
+});
+</script></body>
+</html>
